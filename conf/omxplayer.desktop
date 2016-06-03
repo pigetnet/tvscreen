@@ -1,0 +1,7 @@
+[Desktop Entry]
+ Type=Application
+ Name=OMXPlayer
+ Categories=AudioVideo;Player;
+ Exec=lxterminal --command "omxplayer -o hdmi %f"
+ Terminal=false
+ Icon=/usr/share/icons/nuoveXT2/96x96/categories/applications-multimedia.png

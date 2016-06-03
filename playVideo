@@ -1,0 +1,13 @@
+#!/bin/bash
+# /do/tvscreen/stopVideo
+
+if [ -f /do/sounds/test ];then
+	"/do/sounds/test"
+fi
+
+
+file=$(basename "$1")
+/do/tvscreen/notify "Vidéo en chargement" "$file"
+
+xterm -maximized -e omxplayer --win "0 0 1920 1080" "$1"
+

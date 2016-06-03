@@ -1,0 +1,3 @@
+#!/bin/bash
+# https://doc.ubuntu-fr.org/x11vnc
+su -c 'x11vnc -many -rfbauth /home/pi/.vnc_passwd' pi

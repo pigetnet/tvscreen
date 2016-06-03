@@ -1,0 +1,6 @@
+#!/bin/bash
+/show/listecho "Password for remote access"
+read password
+x11vnc -storepasswd "$password" /home/pi/.vnc_passwd
+chown pi:pi /home/pi/.vnc_passwd
+chmod 400 /home/pi/.vnc_passwd 

@@ -1,0 +1,4 @@
+#!/bin/bash
+/pi/install samba
+cp /do/tvscreen/conf/smb.conf /etc/samba/smb.conf
+/do/samba/restart

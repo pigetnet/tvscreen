@@ -1,0 +1,10 @@
+#!/bin/bash
+# Todo : START AT BOOT (desktop)
+# Todo : START AT BOOT (x11vnc)
+# Todo : First boot disable and autoconfig
+# /boot/config : force hdmi
+
+/show/description "Install minimal graphical interface"
+/system/install xfce4
+/system/install gnome-icon-theme
+cp /do/tvscreen/conf/Xwrapper.config /etc/X11/Xwrapper.config

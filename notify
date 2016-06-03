@@ -1,0 +1,32 @@
+#!/bin/bash
+# VedVals
+# source : http://askubuntu.com/questions/225580/need-to-cause-a-notification-in-12-04-from-shell
+
+if [ $# -eq 2 ];then
+	title="$1"
+	message="$2"
+fi
+
+if [ $# -eq 1 ];then
+	title="Message"
+	message="$1"
+fi
+
+if [ $# -eq 0 ];then
+	title="TV SCREEN NOTIFICATION"
+	message="Piget has installed notifications"
+fi
+
+/show/description "Desktop Notification"
+/show/listecho "$title"
+/show/listecho "$message"
+notifyCommand="python /do/tvscreen/python/not.py \"$title\" \"$message\""
+# echo "$notifyCommand"
+
+user=$(whoami)
+if [[ $user == "pi" ]];then
+	python /do/tvscreen/python/not.py "$title" "$message"
+else
+	export DISPLAY=:0.0
+	su pi -c "$notifyCommand"
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Add notification to xfce
+/system/install python-notify
+mkdir -p /home/pi/.themes/piget/xfce-notify-4.0/
+cp /do/tvscreen/conf/gtkrc /home/pi/.themes/piget/xfce-notify-4.0/gtkrc
+/do/tvscreen/notify

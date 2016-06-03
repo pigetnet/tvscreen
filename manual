@@ -1,0 +1,10 @@
+#!/bin/bash
+# This will allow to start remote control at 1080p without screen"
+echo "Add /boot/config.txt"
+echo "\
+hdmi_force_hotplug=1
+hdmi_group=1
+hdmi_mode=16 # (or any other pi resolution you want, 16 is for 1080p)
+"
+echo "/etc/rc.local"
+echo "/do/tvscreen/remoteTV"

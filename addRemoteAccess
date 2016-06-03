@@ -1,0 +1,5 @@
+#!/bin/bash
+# source: https://doc.ubuntu-fr.org/x11vnc
+# Install x11vnc
+/show/description "Remote access with x11vnc"
+/system/install x11vnc
